@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'web_screen.dart';  // Importa a WebScreen
 
 class IpInputScreen extends StatelessWidget {
-  const IpInputScreen({Key? key}) : super(key: key);
+  const IpInputScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _ipController = TextEditingController();
+    final TextEditingController ipController = TextEditingController();
 
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +25,7 @@ class IpInputScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             TextField(
-              controller: _ipController,
+              controller: ipController,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Endereço IP',
@@ -36,13 +36,13 @@ class IpInputScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Verifica se o IP foi inserido
-                if (_ipController.text.isNotEmpty) {
+                if (ipController.text.isNotEmpty) {
                   // Navega para a WebScreen, passando o IP como parâmetro
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          WebScreen(title: 'Web Page', ipAddress: _ipController.text),
+                          WebScreen(title: 'Web Page', ipAddress: ipController.text),
                     ),
                   );
                 } else {
