@@ -24,21 +24,15 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "C:/Users/User/Pictures/icon.png" # Caminho para o ícone padrão
+  image_path: "assets/images/icon.png" # Caminho para o ícone padrão
   adaptive_icon_background: "#FFFFFF"    # Cor de fundo para o Android
-  adaptive_icon_foreground: "C:/Users/User/Pictures/screen_splash.png" # Imagem para o ícone adaptativo
+  adaptive_icon_foreground: "assets/images/screen_splash.png" # Imagem para o ícone adaptativo
 
 flutter:
   uses-material-design: true
 
   # Para adicionar os ícones personalizados
   assets:
-    - C:/Users/User/Pictures/icon.png
-    - C:/Users/User/Pictures/screen_splash.png
-  # Para adicionar fontes personalizadas, se necessário:
-  # fonts:
-  #   - family: CustomFont
-  #     fonts:
-  #       - asset: fonts/CustomFont-Regular.ttf
-  #       - asset: fonts/CustomFont-Bold.ttf
-  #         weight: 700
+    - assets/images/icon.png
+    - assets/images/screen_splash.png
+ 
